@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register For Job</title>
+    <script>
+        function add()
+        {
+            var tbl = document.getElementById("myTable");
+            var row = tbl.insertRow();
+            var cell1 = row.insertCell();
+            var cell2 = row.insertCell();
+            var cell3 = row.insertCell();
+            var cell4 = row.insertCell();
+            var cell5 = row.insertCell();
+            var cell6 = row.insertCell();
+            cell1.innerHTML = document.getElementById('fname').value;
+            cell2.innerHTML = document.getElementById('lname').value;
+            cell3.innerHTML = document.getElementById('edu').value;
+            cell4.innerHTML = document.getElementById('poy').value;
+            cell5.innerHTML = document.getElementById('exp').value;
+            cell6.innerHTML = document.getElementById('keyword').value;
+        }
+
+    </script>
+</head>
+<style>
+    #divContainer{
+        border: 1px solid black;
+        margin-left: 250px;
+        margin-right: 250px;
+    }
+    #divHeading{
+        border: 1px solid black;
+        height: 50px;
+        background-color: #1b9db6;
+        font-size: 40px;
+        color: antiquewhite;
+        text-align: center;
+    }
+    #divRegister{
+        margin-top: 10px;
+        margin-left: 300px;
+        font-family: Verdana;
+        font-size: 15px;
+    }
+    #myTable{
+        margin: 10px 100px 100px 100px;
+    }
+    #divFooter{
+        margin-top: 50px;
+        margin-left: 400px;
+    }
+    .btn{
+        margin: 0 0 0 170px; 
+    }
+    .btn1{
+        margin: -23px 0px 10px 273px;
+    }
+    #heading2{
+        margin-left: 100px;
+    }
+    .element{
+        margin-left: 70px;
+    }
+    .element1{
+        margin-left: 170px;
+    }
+    .element2{
+        margin-left: 10px;
+    }
+    table td{
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 5px;
+    }
+</style>
+<body>
+    <div id="divContainer">
+        <div id="divHeading">Register for Job</div>
+        <div id="divRegister">
+            <form name="myform" onsubmit="add(); return false;">
+            <div >
+                First Name: 
+                <input type="text" name="Firstname" id="fname" class="element">
+            </div>
+            <br>
+            <div>
+                Last Name: 
+                <input type="text" name="Lastname" id="lname" class="element">
+            </div>
+            <br>
+            <div>
+                Education: &nbsp;
+                <select class="element" id="edu" aria-label="Default select example">
+                    <option selected>--Select--</option>
+                    <option value="High School (X)">High School (X)</option>
+                    <option value="Intermediate (XII)">Intermediate (XII)</option>
+                    <option value="Graduation">Graduation</option>
+                    <option value="Post-Graduation">Post-Graduation</option>
+                    <option value="Diploma">Diploma</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                Passed Out Year: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="poy" name="year" class="">
+            </div>
+            <br>
+            <div>
+                Years of Experience: 
+                <select name="years" id="exp" class="element2">
+                    <option selected value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="More Than 2 Years">More Than 2 Years</option>
+                </select>
+            </div>
+            <br>
+            <div class="textareaa">
+                Job Keywords:
+                <br>
+                <textarea name="Skills" cols="30" rows="10" id="keyword" class="element1"></textarea>
+            </div>
+            <br>
+            <div class="btn">
+                <input type="submit" value="Add Details">
+            </div>
+            <div class="btn1">
+                <input type="reset" value="Cancel">
+            </div>
+            </form>
+        </div>
+        <h2 id="heading2">Details</h2>
+        <table id="myTable" border=1>
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Education</td>
+                <td>Passed Out Year</td>
+                <td>Years of Experience</td>
+                <td>Job Keywords</td>
+            </tr>
+        </table>
+    </div>
+    <footer id="divFooter">
+        &copy; Copyright www.xyz.com
+    </footer>
+</body>
+</html>
